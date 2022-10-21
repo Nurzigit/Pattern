@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<head>
+    <title>Welcome</title>
+    <style>
+        body{
+            background-image: url("https://e-history.kz/upload/iblock/f1c/f1c285743ca2d7365454f2d35dfa9c58.jpg");
+            background-repeat: no-repeat;
+        }
+        .texth {
+            position: relative;
+            margin-top: 20%;
+            color: white;
+            font-size: 3rem;
+            font-family: ui-monospace;
+        }
+        .bta {
+            position: relative;
+            margin-left: 47%;
+        }
+    </style>
+</head>
+<body>
+<h1 class="text-center texth" th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]! It's my first site on Java Spring Boot</h1>
+
+<a class="btn btn-light mt-5 bta" th:href="@{/home}">Learn more</a>
+</body>
+</html>
